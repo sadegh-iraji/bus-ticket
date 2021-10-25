@@ -12,7 +12,6 @@ import javax.persistence.Inheritance;
 @Inheritance
 public class User extends BaseEntity<Long> {
 
-
     private String username;
 
     private String password;
