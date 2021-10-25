@@ -8,10 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Main Menu</title>
 </head>
 <body>
-<h1>Hello</h1>
+<>
+<h1>Bus Ticket Reservation</h1>
+<h2>Main Menu</h2>
+
+<div id='divMenu'>
+    <ul>
+        <li><a href='signIn'>Sign In</a></li>
+        <li><a href='adminCheck'>Customer Sign Up</a></li>
+    </ul>
+</div>
 
 </body>
 </html>
