@@ -3,12 +3,12 @@ package ir.maktab.busticket.model;
 import ir.maktab.busticket.model.base.BaseEntity;
 import ir.maktab.busticket.model.enumeration.City;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
 import javax.validation.constraints.FutureOrPresent;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Travel extends BaseEntity<Long> {
@@ -23,6 +23,9 @@ public class Travel extends BaseEntity<Long> {
     private LocalDate date;
 
     private LocalTime time;
+
+    @OneToMany(mappedBy = "travel", cascade = CascadeType.MERGE)
+    private List<Ticket> tickets = new ArrayList<>();
 
     public Travel() {
     }

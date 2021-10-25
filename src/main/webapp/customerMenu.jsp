@@ -16,7 +16,7 @@
 <h2>Welcome <% out.print(SecurityContext.getActiveUser().getUsername());%></h2>
 <div id='divMenu'>
     <ul>
-        <li><a href='searchTicket'>Reserve a Ticket</a></li>
+        <li><a href='searchTravels'>Reserve a Ticket</a></li>
         <li><a href='reservedTickets'>Show Your Reserved Tickets</a></li>
         <li><a href='logOut'>Sign Out</a></li>
     </ul>

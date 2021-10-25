@@ -1,10 +1,12 @@
 package ir.maktab.busticket.controller;
 
 import ir.maktab.busticket.model.Customer;
+import ir.maktab.busticket.model.enumeration.City;
 import ir.maktab.busticket.model.enumeration.UserType;
 import ir.maktab.busticket.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,4 +34,10 @@ public class CustomerController {
         }
         return "signUpConfirm";
     }
+
+    @GetMapping("/customerMenu")
+    public String customerMenu(){
+        return "customerMenu";
+    }
+
 }

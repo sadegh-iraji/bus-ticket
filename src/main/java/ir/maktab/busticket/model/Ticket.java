@@ -3,6 +3,7 @@ package ir.maktab.busticket.model;
 import ir.maktab.busticket.model.base.BaseEntity;
 import ir.maktab.busticket.model.enumeration.Gender;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
@@ -13,10 +14,10 @@ public class Ticket extends BaseEntity<Long> {
 
     private Gender travellerGender;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     private Travel travel;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     private Customer customer;
 
     public Ticket() {
