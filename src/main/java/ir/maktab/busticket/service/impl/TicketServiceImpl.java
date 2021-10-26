@@ -1,10 +1,13 @@
 package ir.maktab.busticket.service.impl;
 
+import ir.maktab.busticket.model.Customer;
 import ir.maktab.busticket.model.Ticket;
 import ir.maktab.busticket.repository.TicketRepository;
 import ir.maktab.busticket.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class TicketServiceImpl implements TicketService {
@@ -26,4 +29,10 @@ public class TicketServiceImpl implements TicketService {
     public void delete(Ticket ticket) {
         ticketRepository.delete(ticket);
     }
+
+    @Override
+    public List<Ticket> findByCustomer(Customer customer) {
+        return ticketRepository.findByCustomer(customer);
+    }
+
 }

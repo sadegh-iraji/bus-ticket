@@ -1,6 +1,7 @@
 package ir.maktab.busticket.service.impl;
 
 import ir.maktab.busticket.model.Travel;
+import ir.maktab.busticket.model.enumeration.City;
 import ir.maktab.busticket.repository.TravelRepository;
 import ir.maktab.busticket.service.TravelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class TravelServiceImpl implements TravelService {
     }
 
     @Override
-    public List<Travel> findByOriginAndDestinationAndDate(String origin, String destination, LocalDate date) {
+    public List<Travel> findByOriginAndDestinationAndDate(City origin, City destination, LocalDate date) {
         return travelRepository.findByOriginAndDestinationAndDate(origin, destination, date);
     }
 

@@ -13,6 +13,6 @@
 </head>
 <body>
 <h2>No Travel Available For You</h2>
-<a href='customerMenu' class='underline'>Return to Menu</a>
+<p><a href='customerMenu' class='underline'>Return to Menu</a></p>
 </body>
 </html>

@@ -12,8 +12,9 @@
     <title>Sign In</title>
 </head>
 <body>
-<form action="singInConfirm" method="post">
-    <table>
+<h2>Sign In</h2>
+<form action="signInConfirm" method="post">
+    <table align="center">
         <tr>
             <td align='right'><label for='username'>Username : </label></td>
             <td align='left'><input type='text' required='required' pattern='.+' name='username' id='username'></td>

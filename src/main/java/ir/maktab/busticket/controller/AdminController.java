@@ -36,10 +36,4 @@ public class AdminController {
         modelMap.addAttribute("cities", cities);
         return "addTravel";
     }
-
-    @PostMapping("/addTravelConfirm")
-    public String addTravelConfirm() {
-
-        return "addTravelConfirm";
-    }
 }

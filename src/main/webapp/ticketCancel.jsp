@@ -13,6 +13,6 @@
 </head>
 <body>
 <h2>Your Ticket Cancelled Successfully</h2>
-<a href='customerMenu' class='underline'>Return to Menu</a>
+<p><a href='customerMenu' class='underline'>Return to Menu</a></p>
 </body>
 </html>

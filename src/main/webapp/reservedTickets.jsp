@@ -14,7 +14,7 @@
 </head>
 <body>
     <h2>Reserved Tickets</h2>
-    <table class="ticket">
+    <table align="center" class="ticket">
         <thead>
         <th colspan="3">List of Reserved Tickets</th>
         </thead>
@@ -27,7 +27,7 @@
             <tr>
                 <td>
                     <form action="showTicketDetails" method="post">
-                        <input type="hidden" value="<p:out value="${ticket.id}"/>">
+                        <input type="hidden" name="id" value="<p:out value="${ticket.id}"/>">
                         <input type="submit" value="Show Ticket">
                     </form>
                 </td>

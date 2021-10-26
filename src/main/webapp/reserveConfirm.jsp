@@ -23,6 +23,6 @@
     </p:when>
 </p:choose>
 <h3>Ticket ID : <p:out value="${ticket.id}"/></h3>
-<a href='customerMenu' class='underline'>Return to Menu</a>
+<p><a href='customerMenu' class='underline'>Return to Menu</a></p>
 </body>
 </html>

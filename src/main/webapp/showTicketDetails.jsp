@@ -14,7 +14,7 @@
 </head>
 <body>
 <h2>Ticket Details</h2>
-<table class="ticket">
+<table align="center" class="ticket">
     <thead>
     <th colspan="2">Bus Ticket</th>
     </thead>
@@ -53,7 +53,7 @@
     <tr>
         <td colspan="2">
             <form action="ticketCancel" method="post">
-                <input type="hidden" value="<p:out value="${ticket.id}"/>">
+                <input type="hidden" name="id" value="<p:out value="${ticket.id}"/>">
                 <input type="submit" value="Ticket Cancellation">
             </form>
         </td>

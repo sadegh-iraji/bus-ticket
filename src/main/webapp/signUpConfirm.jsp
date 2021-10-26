@@ -12,6 +12,6 @@
 </head>
 <body>
 <h2>You Signed Up Successfully</h2>
-<a href='signIn' class='underline'>Sign In</a>
+<p><a href='signIn' class='underline'>Sign In</a></p>
 </body>
 </html>

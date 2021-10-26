@@ -12,7 +12,6 @@
     <title>Main Menu</title>
 </head>
 <body>
-<>
 <h1>Bus Ticket Reservation</h1>
 <h2>Main Menu</h2>
 

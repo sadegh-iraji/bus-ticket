@@ -13,6 +13,6 @@
 </head>
 <body>
 <h2>Wrong Username or Password</h2>
-<a href='signIn' class='underline'>Sign In</a>
+<p><a href='signIn' class='underline'>Sign In</a></p>
 </body>
 </html>

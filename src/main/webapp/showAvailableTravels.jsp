@@ -13,6 +13,7 @@
     <title>Available Travels</title>
 </head>
 <body>
+<h2>Available Travles</h2>
 <table align="center" class="ticket">
     <tr>
         <td colspan="2"> Path: <p:out value="${origin}"/> - <p:out value="${destination}"/></td>

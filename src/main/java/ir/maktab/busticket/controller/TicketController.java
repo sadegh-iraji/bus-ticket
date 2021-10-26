@@ -10,8 +10,11 @@ import ir.maktab.busticket.util.SecurityContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Controller
 public class TicketController {
@@ -49,7 +52,7 @@ public class TicketController {
 
     @PostMapping("/showTicketDetails")
     public String showTicketDetails(@RequestParam String id,
-                                    ModelMap modelMap){
+                                    ModelMap modelMap) {
 
         Ticket ticket = ticketService.findById(Long.parseLong(id));
         Travel ticketTravel = ticket.getTravel();
@@ -60,9 +63,24 @@ public class TicketController {
     }
 
     @PostMapping("ticketCancel")
-    public String ticketCancel(@RequestParam String id){
+    public String ticketCancel(@RequestParam String id) {
         Ticket ticket = ticketService.findById(Long.parseLong(id));
         ticketService.delete(ticket);
         return "ticketCancel";
+    }
+
+    @GetMapping("/reservedTickets")
+    public String reservedTickets(ModelMap modelMap) {
+
+        Customer customer = (Customer) SecurityContext.getActiveUser();
+
+        List<Ticket> ticketList = ticketService.findByCustomer(customer);
+
+        if (ticketList.isEmpty()) {
+            return "noTicketsReserved";
+        }
+
+        modelMap.addAttribute("ticketList", ticketList);
+        return "reservedTickets";
     }
 }

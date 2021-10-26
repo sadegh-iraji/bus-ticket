@@ -13,25 +13,28 @@
     <title>Search Tickets</title>
 </head>
 <body>
+<h2>Search Travels</h2>
 <form action="existTravel" method="get">
     <label for="origin">From :</label>
     <select name='origin' id='origin'>
         <option value="" disabled selected>Select Your Travel Origin ...</option>
         <p:forEach items="${cities}" var="city">
-        <option value="<p:out value="${city}"/>"><p:out value="${city.name()}"/></option>
-        </p:forEach>
-
-        <label for="destination">To :</label>
-        <select name='destination' id='destination'>
-            <option value="" disabled selected>Select Your Travel Destination ...</option>
-            <p:forEach items="${cities}" var="city">
             <option value="<p:out value="${city}"/>"><p:out value="${city.name()}"/></option>
-            </p:forEach>
+        </p:forEach>
+    </select>
 
-            <label for='date'>Date : </label>
-            <input type='date' required='required' name='date' id='date'>
+    <label for="destination">To :</label>
+    <select name='destination' id='destination'>
+        <option value="" disabled selected>Select Your Travel Destination ...</option>
+        <p:forEach items="${cities}" var="city">
+            <option value="<p:out value="${city}"/>"><p:out value="${city.name()}"/></option>
+        </p:forEach>
+    </select>
 
-            <input type='submit' value='Online Search'>
+    <label for='date'>Date : </label>
+    <input type='date' required='required' name='date' id='date'>
+
+    <input type='submit' value='Online Search'>
 </form>
 
 </body>

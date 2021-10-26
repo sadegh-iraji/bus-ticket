@@ -13,6 +13,6 @@
 </head>
 <body>
 <h2>Travel Added Successfully</h2>
-<a href='adminMenu' class='underline'>Return to Admin Menu</a>
+<p><a href='adminMenu' class='underline'>Return to Admin Menu</a></p>
 </body>
 </html>
