@@ -13,6 +13,7 @@
     <title>Reserve Confirm</title>
 </head>
 <body>
+<h1>Reservation Confirm</h1>
 <p:choose>
     <p:when test="${gender.equalsIgnoreCase('MALE')}">
         <h2>Mr. <p:out value="${ticket.travellerName}"/>, Your Ticket Reservation Was Successful</h2>
@@ -21,7 +22,7 @@
         <h2>Mrs. <p:out value="${ticket.travellerName}"/>, Your Ticket Reservation Was Successful</h2>
     </p:when>
 </p:choose>
-<h2>Ticket ID : <p:out value="${ticket.id}"/></h2>
+<h3>Ticket ID : <p:out value="${ticket.id}"/></h3>
 <a href='customerMenu' class='underline'>Return to Menu</a>
 </body>
 </html>

@@ -46,4 +46,23 @@ public class TicketController {
         modelMap.addAttribute("ticket", ticket);
         return "reserveConfirm";
     }
+
+    @PostMapping("/showTicketDetails")
+    public String showTicketDetails(@RequestParam String id,
+                                    ModelMap modelMap){
+
+        Ticket ticket = ticketService.findById(Long.parseLong(id));
+        Travel ticketTravel = ticket.getTravel();
+        modelMap.addAttribute("ticket", ticket);
+        modelMap.addAttribute("ticketTravel", ticketTravel);
+
+        return "showTicketDetails";
+    }
+
+    @PostMapping("ticketCancel")
+    public String ticketCancel(@RequestParam String id){
+        Ticket ticket = ticketService.findById(Long.parseLong(id));
+        ticketService.delete(ticket);
+        return "ticketCancel";
+    }
 }
